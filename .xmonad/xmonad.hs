@@ -113,7 +113,7 @@ main = do
 myStartupHook = do
           --spawnOnce "emacs --daemon &"
           spawnOnce "nitrogen --restore &" 
-          spawnOnce "compton --config /home/dt/.config/compton/compton.conf &" 
+          spawnOnce "compton --config /home/jottley/.config/compton/compton.conf &" 
           setWMName "LG3D"
           --spawnOnce "exec /usr/bin/trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 15 --transparent true --alpha 0 --tint 0x292d3e --height 19 &"
           --spawnOnce "/home/dt/.xmonad/xmonad.start" -- Sets our wallpaper
@@ -166,7 +166,7 @@ myKeys =
     --- Grid Select
         , (("M-S-t"), spawnSelected'
           [ ("Audacity", "audacity")
-          , ("Deadbeef", "deadbeef")
+          , ("Lollypop", "lollypop")
           , ("Emacs", "emacs")
           , ("Firefox", "firefox")
           , ("Kate", "kate")
@@ -252,12 +252,12 @@ myKeys =
         , ("M1-C-<Return>", spawn "dmenu_run -fn 'UbuntuMono Nerd Font:size=10' -nb '#292d3e' -nf '#bbc5ff' -sb '#82AAFF' -sf '#292d3e' -p 'dmenu:'")
         , ("M1-C-e", spawn "./.dmenu/dmenu-edit-configs.sh")
         , ("M1-C-m", spawn "./.dmenu/dmenu-sysmon.sh")
-        , ("M1-C-p", spawn "passmenu")
+    --- , ("M1-C-p", spawn "passmenu")
         , ("M1-C-s", spawn "./.dmenu/dmenu-surfraw.sh")
 
     --- My Applications (Super+Alt+Key)
         , ("M-M1-a", spawn (myTerminal ++ " -e ncpamixer"))
-        , ("M-M1-b", spawn ("surf www.youtube.com/c/DistroTube/"))
+        , ("M-M1-b", spawn ("surf https://www.youtube.com/watch?v=hHW1oY26kxQ"))
         , ("M-M1-c", spawn (myTerminal ++ " -e cmus"))
         , ("M-M1-e", spawn (myTerminal ++ " -e neomutt"))
         , ("M-M1-f", spawn (myTerminal ++ " -e sh ./.config/vifm/scripts/vifmrun"))
