@@ -1,0 +1,170 @@
+#!/bin/sh
+
+! ===== General ====
+Xft*dpi:	96
+Xft*autohint:	0
+Xft*antialias:	1
+Xft*hinting:	1
+Xft*rgba: 	rgb
+Xft*hintstyle: 	hintslight
+Xft*lcdfilter:  lcddefault 
+
+!TomorrowNightBlue
+#define t_background        #002451
+#define t_current_line      #00346e
+#define t_selection      	#003f8e
+#define t_foreground      	#ffffff
+#define t_comment	     	#7285b7
+#define t_red		     	#ff9da4
+#define t_orange	     	#ffc58f
+#define t_yellow        	#ffeead
+#define t_green	        	#d1f1a9
+#define t_aqua	        	#99ffff
+#define t_blue	        	#bbdaff
+#define t_purple        	#ebbbff
+
+
+*.foreground:   t_foreground
+*.background:   t_background
+*.cursorColor:  #aeafad
+
+! Black / Grey
+*.color0:       #000000
+*.color8:       #666666
+
+! Red / Bright Red
+*.color1:       t_red
+*.color9:       #FF3334
+
+! Green + Bright Green
+*.color2:       t_green
+*.color10:      #9ec400
+
+! Yellow (Orange) + Bright Yellow (Yellow)
+*.color3:       t_orange
+*.color11:      t_yellow
+
+! Blue + Bright Blue
+*.color4:       t_blue
+*.color12:      t_blue
+
+! Magenta (Purple) + Bright Magenta
+*.color5:       t_purple
+*.color13:      #b777e0
+
+! Cyan (Aqua) + Bright Cyan
+*.color6:       t_aqua
+*.color14:      #54ced6
+
+! Light Grey (Selection) + White (Current Line)
+*.color7:       t_selection
+*.color15:      t_current_line
+
+! ===== Cursor ====
+Xcursor*theme: 	cz-Viator
+Xcursor*size: 	16
+
+! ===== Xterm ====
+xterm*vt100*geometry: 		75x25
+xterm*locale:	      		true
+xterm*utf8: 	      		true
+xterm*utf8Title:      		true
+xterm*borderWidth: 		0
+xterm*internalBorder: 		2
+xterm*allowBoldFonts: 		false
+xterm*background:               #dee2ef
+xterm*fontMenu*fontdefault*Label: Default
+xterm*fontMenu*font2*Label:  	Tiny
+xterm*vt100.font2:           	5x7
+xterm*vt100.utf8Fonts.font2:	-misc-fixed-medium-r-normal-*-8-*-*-*-*-*-iso10646-1
+xterm*vt100.utf8Fonts.font:	-misc-fixed-medium-r-semicondensed-*-11-*-*-*-*-*-iso10646-1
+XTerm*vt100.faceName:	-misc-fixed-medium-r-semicondensed-*-11-*-*-*-*-*-iso10646-1
+XTerm*vt100.faceSize: 		8
+xterm*saveLines: 		16384
+xterm*loginShell: 		true
+XTerm*charClass:		33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+XTerm*on2Clicks: 		word
+XTerm*on3Clicks: 		line
+xerm*termName: 			xterm-256color
+xterm*eightBitInput: 		false
+xterm*rightScrollBar: 		false
+xterm*ScrollBar: 		false
+xterm*scrollTtyOutput: 		true
+xterm*scrollKey: 		true
+xterm*loginshell: 		true
+xterm*maximized: 		false
+xterm*vt100.metaSendsEscape: 	true
+xterm*vt100.Translations: #override \
+    Alt <KeyPress> minus: smaller-vt-font() \n\
+    Alt <KeyPress> plus: larger-vt-font() \n\
+		<Btn1Up>: select-end(CLIPBOARD,PRIMARY,CUT_BUFFER0) \n\
+    Alt <KeyPress> V: insert-selection(CLIPBOARD,PRIMARY,CUT_BUFFER0)
+
+! ===== XLock ====
+XLock*dpmsoff: 		1
+XLock*description: 	on 
+XLock*echokeys: 	off 
+XLock*info: 		"screen is locked" 
+XLock*mode:             matrix      
+XLock*username: 	username: 
+XLock*password: 	password: 
+
+! ===== XClock ====
+XClock*analog: 		false
+XClock*twentyfour: 	true
+XClock*padding: 	0
+XClock*geometry: 	-2-2
+XClock*render: 		false
+XClock*font: 		-misc-fixed-bold-r-normal-*-12-*-*-*-*-*-iso10646-1
+XClock*height: 		12
+XClock*background: 	#2f2f4a
+XClock*foreground: 	white
+XClock*borderWidth: 	0
+
+! ===== Xpdf ====
+Xpdf*Background:    #afadbf
+Xpdf*Foreground:    #2f2f4a
+Xpdf*toolTipEnable: true
+Xpdf*textEncoding:  utf8
+Xpdf*textEOL:       unix
+
+! ===== XScreenSaver ====
+!general
+xscreensaver.timeout: 			0:10:00
+xscreensaver.cycle: 			0:08:00
+xscreensaver.lock: 			True
+xscreensaver.lockTimeout: 		0:10:00
+xscreensaver.passwdTimeout: 		0:00:30
+xscreensaver.dateFormat: 		%I:%M %p, %a %b %d
+xscreensaver.visualID: 			default
+xscreensaver.installColormap:    	True
+xscreensaver.verbose: 			False
+xscreensaver.timestamp: 		True
+xscreensaver.splash: 			False
+xscreensaver.demoCommand: 		xscreensaver-demo
+xscreensaver.prefsCommand: 		xscreensaver-demo -prefs
+xscreensaver.nice: 			10
+xscreensaver.memoryLimit: 		0
+xscreensaver.fade: 			True
+xscreensaver.unfade: 			False
+xscreensaver.fadeSeconds: 		0:00:05
+xscreensaver.fadeTicks: 		20
+xscreensaver.captureStderr: 		True
+xscreensaver.ignoreUninstalledPrograms: True
+xscreensaver.dpmsEnabled: 		True
+xscreensaver.dpmsQuickOff: 		False
+!colors
+xscreensaver.Dialog.foreground: 	    #ffffff
+xscreensaver.Dialog.background: 	    #424242
+xscreensaver.Dialog.topShadowColor: 	    #424242
+xscreensaver.Dialog.bottomShadowColor: 	    #424242
+xscreensaver.Dialog.Button.foreground: 	    #B22222
+xscreensaver.Dialog.Button.background: 	    #ffffff
+xscreensaver.Dialog.text.foreground: 	    #B22222
+xscreensaver.Dialog.text.background: 	    #ffffff
+xscreensaver.Dialog.internalBorderWidth:    24
+xscreensaver.Dialog.borderWidth: 	    1
+xscreensaver.Dialog.shadowThickness: 	    2
+xscreensaver.passwd.thermometer.foreground: #B22222
+xscreensaver.passwd.thermometer.background: #000000
+xscreensaver.passwd.thermometer.width: 	    12
