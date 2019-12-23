@@ -168,3 +168,5 @@ xscreensaver.Dialog.shadowThickness: 	    2
 xscreensaver.passwd.thermometer.foreground: #B22222
 xscreensaver.passwd.thermometer.background: #000000
 xscreensaver.passwd.thermometer.width: 	    12
+
+URxvt.scrollBar: false
